@@ -25,10 +25,10 @@ Each model was trained on three variations of the dataset:
 
 To prepare the data for modeling, the following preprocessing steps were applied:
 
-* ✅ **Handling class imbalance** with oversampling and undersampling techniques
-* ✅ **Feature scaling** using appropriate scalers
-* ✅ **Categorical encoding** with suitable encoding strategies
-* ✅ **Saving all preprocessing transformers** to ensure consistent inference-time transformations
+*  **Handling class imbalance** with oversampling and undersampling techniques
+*  **Feature scaling** using appropriate scalers
+*  **Categorical encoding** with suitable encoding strategies
+*  **Saving all preprocessing transformers** to ensure consistent inference-time transformations
 
 
 ### Model Experimentation & Tracking
