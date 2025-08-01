@@ -5,9 +5,12 @@ import streamlit as st
 import joblib
 import os
 
-# Define paths
-ENCODERS_PATH = "label_encoders.pkl"
-TRANSFORMER_PATH = "preprocessor_label_encoded.pkl"
+# Get absolute path of current file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Use full paths to the model files
+ENCODERS_PATH = os.path.join(BASE_DIR, "label_encoders.pkl")
+TRANSFORMER_PATH = os.path.join(BASE_DIR, "preprocessor_label_encoded.pkl")
 
 def display_eda(df):
     st.subheader("Basic Info")
