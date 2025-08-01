@@ -9,9 +9,12 @@ st.set_page_config(page_title="MLFlow Model App", layout="wide")
 # Sidebar with tabs
 tab = st.sidebar.radio("Select Tab", ["Analytics", "Prediction"])
 
-# Load dataset for EDA
-DATA_PATH = "data/churn.csv"
-LOCAL_MODEL_PATH = "local_model/best_model.pkl"
+# Load dataset 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data/churn.csv")
+LOCAL_MODEL_PATH = os.path.join(BASE_DIR, "best_model.pkl")
+
+
 
 def infer_with_local_model(processed_df):
     model = joblib.load(LOCAL_MODEL_PATH)
